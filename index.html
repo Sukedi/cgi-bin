@@ -11,6 +11,8 @@
 <button onClick="setCookie('userid','Sukedi',365)">Tulis</button>
 <p>&nbsp;</p>
 <button onClick="baca()">Baca</button>
+<p>&nbsp;</p>
+<button onClick="deleteCookie('userid')">Hapus</button>
     
 <script>
 function baca(){
@@ -27,6 +29,8 @@ function setCookie(name, value, days) {
         expires = "; expires=" + date.toUTCString();
     }
     document.cookie = name + "=" + encodeURIComponent(value) + expires + "; path=/";
+
+  alert("Simpan sukses");
 }
 
 // Baca cookie
@@ -45,6 +49,8 @@ function getCookie(name) {
 // Hapus cookie
 function deleteCookie(name) {
     document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+  alert("Hapus sukses");
 }
 </script>
     
